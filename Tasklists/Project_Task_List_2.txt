@@ -1,0 +1,60 @@
+Project Name: Bitewave
+
+Brief: Online audio library
+
+Project Description: This project will be an online tool (just like soundcloud) for music lovers. Here they can log in, upload music, create a playlist, share and so on...
+
+-----Rose-----
+1) Search Music
+Desc: Search for a song.
+
+2) Pause History
+Desc: This will store the last song listening so the user can continue where they left.
+
+3) Count (you listen, total other listen)
+Desc: This will count and display the number of times the user listened to the song, total number everyone listened to the song.
+
+4) Popularity
+Desc: This will provide information to the user for new and popular music.
+
+
+
+-----Bhanu-----
+1) Signup Form
+Desc: Users can register to the website.
+
+2) Add Upload Music
+Desc: This will allow the user to upload and save music online.
+
+3) Song recommendations: Based on user listening history, this will suggest user new songs.
+4) Offline MusicDesc: This will allow the user to download and listen to music without the internet.
+
+-----Dhanpreet-----
+1) MVC
+Desc: Basic model of the project, over this all the features will be built.
+
+2) Comments
+Desc: This will allow the user to comment below the song.
+
+3) Create Playlist
+Desc: Create a new playlist by uploading music or adding already available songs online.
+
+4) Like/Dislike Song or Playlist
+Desc: This will allow the user to like the song and save it to there like a playlist.
+
+-----Yegor-----
+1) Subscribe Music Channel
+Desc: This will allow the user to create music channels and let other users subscribe to it.
+
+2) Share Song
+Desc: With this user can share songs will friends in the project or sare link over other social media.
+
+3) Add friends
+Desc: This will allow the user to add and manage friends.
+
+-----Cynthia-----
+1)User profiles: allows users to customize their usernames, description, and playlists that others will see.
+
+2)Profile playlists: Registered users can create their own playlists that display on their profiles. Users can create, delete and edit playlists that are only visisble when logged in to their account.
+
+3)Our Team: Shows current company positions and members. Admin side can update, create and delete members while User can view the page.

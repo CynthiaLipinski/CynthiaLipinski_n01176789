@@ -1,0 +1,16 @@
+<!--Lab 3-->
+
+<html>
+
+<head>
+    <link href="styles/style.css" rel="stylesheet" />
+    <title>
+        Lab 3
+    </title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="logo"><span>LOGO</span></div>
+        <p>Contact Information <br> 123-456-7890 <br> 42 Wallaby Way, Sydney</p>
+    </div>
