@@ -1,49 +1,16 @@
-# bitewave
-----Dhanpreet Singh----
-> Created website interface and hosted to : https://bitewave.000webhostapp.com/#
+# N01176789 - Cynthia Lipinski
 
-> index.html replaced index.php also master layout created, files updated on server
+Features Descriptions and Files:
 
-Working on feature
-1) Upload music
-    >Done --
-    >Files: dhanpreet_upload_audio.php
-    dhanpreet_update_audio.php
-    dhanpreet_list_audio.php
-    dhanpreet_delete_audio.php
-    Upload Audio, List Audio, Delete Audio and edit audio details all working with database.    
-
-2) Comment Feature:
-    >Done -- Interface to add comments for each song, user id will be passed along to track who made that comment.
-    Comments posted and loaded using AJAX.
-    
-    >Pending---
-    
-        a) List all comments and option to edit them.
-    
-
------Rose------  
-Features:
-1) Search Bar
-    >Done
-    >Files:
-    searchResults.php
-2) FAQ
-    >Done: answers to common questions
-    >Files:
-    faq.php
-    faqList.php
-    faqAdd.php
-    faqDelete.php
-    faqUpdate.php
-
------Bhanu-----
-
-
------Yegor-----
-
-
-----Cynthia----  
-Features:
-1) User Profile
-2) History
+1) User profiles: Allows users to customize their usernames, description, and playlists that others will see. When registering it checks if the username already exists in the database so that there are no duplicates.     
+  
+files: Cynthia_userprofile_add.php, Cynthia_userprofile_list.php, cynthia_userprofile_login.php, Cynthia_userprofile_logout.php, Cynthia_userprofile_profile.php, Cynthia_userprofile_update.php, Cynthia_userprofile_view.php   
+   
+2) Profile playlists: Registered users can create their own playlists that display on their profiles. Users can create, delete and edit playlists. The playlists are only visisble when logged in to the specific account.  
+  
+files: Cynthia_playlist_add.php, Cynthia_playlist_delete.php, cynthia_playlist_playlist.php, Cynthia_playlist_view.php     
+     
+3) Our Team: Shows current company positions and members. Admin side can update, create and delete members while User can view the page. In the database there is an admin option which can be set to 1 for admin. It's default is 0 when a user is registered.
+  
+files: cynthia_ourteam_view.php, cynthia_ourteam_update.php, cynthia_ourteam_ourteam.php, cynthia_ourteam_delete.php, cynthia_ourteam_add.php     
+database file: Cynthia_database.php
