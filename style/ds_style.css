@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo:400,700|Kalam|Montserrat&display=swap");
+/***************Box Model fix**************
+*******************************************/
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Arvo", serif, sans-serif;
+}
+
+/* ******GLOBAL STYLES*********** */
+
+.inblock {
+  display: inline-block;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.vh_center {
+  justify-content: center;
+  align-items: center;
+}
+
+.test_border {
+  border: 0.125rem dotted black;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.hvh100 {
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  width: 15.625rem;
+  padding: .5rem;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.25rem;
+  background-color: #99201c;
+  background-image: linear-gradient(316deg, #c412c4 0%, #925884 74%);
+  background-size: 200% 200%;
+  animation: bgchange 3s infinite;
+}
+
+.button:hover {
+  background-color: #ba2d0b;
+  background-image: linear-gradient(319deg,
+      #ba2d0b 0%,
+      #fe7f2d 37%,
+      #ffbf46 100%);
+}
+
+/******B***O***D***Y******/
+.body {
+  background-size: 200% 200%;
+  animation: bgchange 30s infinite;
+  background-color: #ffa69e;
+  /* Credit for linear gradient goes to "https://www.gradientmagic.com/collection/backgammon" */
+  background-image: linear-gradient(206deg,
+      rgba(72, 45, 45, 0.46) 0%,
+      rgba(72, 45, 45, 0.46) 14.286%,
+      rgba(102, 42, 45, 0.46) 14.286%,
+      rgba(102, 42, 45, 0.46) 28.572%,
+      rgba(131, 39, 44, 0.46) 28.572%,
+      rgba(131, 39, 44, 0.46) 42.858%,
+      rgba(161, 36, 44, 0.46) 42.858%,
+      rgba(161, 36, 44, 0.46) 57.144%,
+      rgba(191, 33, 43, 0.46) 57.144%,
+      rgba(191, 33, 43, 0.46) 71.43%,
+      rgba(220, 30, 43, 0.46) 71.43%,
+      rgba(220, 30, 43, 0.46) 85.716%,
+      rgba(250, 27, 42, 0.46) 85.716%,
+      rgba(250, 27, 42, 0.46) 100.002%),
+    linear-gradient(127deg,
+      rgb(254, 36, 223) 0%,
+      rgb(254, 36, 223) 14.286%,
+      rgb(227, 44, 210) 14.286%,
+      rgb(227, 44, 210) 28.572%,
+      rgb(201, 52, 198) 28.572%,
+      rgb(201, 52, 198) 42.858%,
+      rgb(174, 60, 185) 42.858%,
+      rgb(174, 60, 185) 57.144%,
+      rgb(147, 67, 172) 57.144%,
+      rgb(147, 67, 172) 71.43%,
+      rgb(121, 75, 160) 71.43%,
+      rgb(121, 75, 160) 85.716%,
+      rgb(94, 83, 147) 85.716%,
+      rgb(94, 83, 147) 100.002%);
+}
+
+/* # # # # # # # # # #
+  H  E  A  D  D  E  R
+# # # # # # # # # # */
+
+/*########## N A V    B A R ############*/
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(319deg, #ab0bba 0%, #80055b 37%, #44077e 100%);
+  z-index: 1000;
+}
+
+/*########## N A V    L O G O ############*/
+nav .logo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/*########## N A V    S E A R C H    B A R ############*/
+.search-bar {
+  background: #fff;
+  height: 40px;
+  border-radius: 40px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar:hover>.search-in {
+  width: 240px;
+}
+
+.search-in {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: #111;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+}
+
+.search-bar button {
+  border: none;
+  background-color: #fff;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/*########## N A V    M E N U ############*/
+nav ul {
+  position: relative;
+  display: flex;
+}
+
+nav ul li {
+  position: relative;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  position: relative;
+  padding: 5px 20px;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #63075e;
+}
+
+nav .loginout {
+  background: #f56545;
+  border: #fff 2px dotted;
+}
+
+nav .loginout a {
+  padding: 5px;
+}
+
+.toggle {
+  display: none;
+}
+
+/*# # # # # # # # # # #
+       M  A  I  N
+# # # # # # # # # # #*/
+
+/*######### S E C T I O N ##########*/
+section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  padding: 150px;
+}
+
+section img {
+  max-width: 500px;
+  margin-left: 30px;
+}
+
+section h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 18px;
+}
+
+section a {
+  padding: 8px 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+
+}
+
+section:nth-child(even) {
+  background: rgba(45, 52, 54, 0.4);
+}
+
+/*######### T R E N D I N G
+    S E C T I O N ##########*/
+section.trending,
+section.topchart {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 50px 50px 100px;
+  justify-content: center;
+}
+
+section.trending a,
+section.topchart a {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+section.trending img,
+section.topchart img {
+  margin: 0;
+  padding: 0;
+}
+
+section.trending h3,
+section.topchart h3 {
+  margin-top: -5px;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+/*######### U P L O A D   &   U P D A TE    A U D I O
+S E C T I O N ##########*/
+.upload_audio {
+  min-height: 87vh;
+}
+
+.upload_audio_form,
+.update_audio__form {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgb(61, 39, 80);
+  border-radius: 10px;
+  padding: 20px 40px;
+  font-size: 20px;
+  background-color: rgba(99, 87, 109, 0.2);
+}
+
+.upload_audio_form input,
+.update_audio__form input {
+  margin: 5px 0;
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.upload_audio_form label,
+.update_audio__form label {
+  margin-top: 5px;
+}
+
+.page_head {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.update_audio .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+/*######### L I S T    A U D I O
+S E C T I O N ##########*/
+.list_audio_section {
+  min-height: 85vh;
+  flex-direction: column;
+  justify-content: unset;
+  padding-top: 100px;
+}
+
+.list_audioTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.list_audioTable thead tr {
+  font-size: 1.25vw;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.list_audioTable tbody tr:hover {
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.list_audioTable th,
+.list_audioTable td {
+  text-align: center;
+  padding: 5px;
+}
+
+.list_audioTable .button {
+  width: 8rem;
+  font-size: unset;
+  background-image: linear-gradient(316deg, #3015a8b0 10%, #025c80a2 85%);
+}
+
+.list_audioTable #btn-delete {
+  background-image: linear-gradient(316deg, #cc000093 10%, #80000093 85%);
+}
+
+/*######### A U D I O   D E T A I L
+S E C T I O N ##########*/
+.audio_detail {
+  min-height: 87vh;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  justify-content: unset;
+}
+
+.audio_detail .audio_info {
+  background-color: rgba(255, 255, 255, 0.671);
+  box-shadow: 0 0 20px rgb(61, 39, 80);
+  border-radius: 10px;
+  color: rgb(17, 17, 17);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
+
+.audio_detail .audio_info p {
+  min-width: 50%;
+  padding: 5px;
+}
+
+.audio_detail .audio_info span {
+  font-size: larger;
+  display: inline-block;
+  width: 25%;
+}
+
+.audio_detail .audio_comment,
+.audio_detail .top_comments {
+  width: 100%;
+  margin: 10px 0;
+  color: #111;
+  font-size: 30px;
+  padding: 0 30px;
+  display: flex;
+}
+
+.audio_detail .audio_comment textarea {
+  background-color: rgba(255, 255, 255, 0.233);
+  min-width: 800px;
+  border: unset;
+  border-radius: 5px;
+  min-height: 2rem;
+  padding: 2px 10px;
+  font-size: 1.25rem;
+}
+
+.audio_detail .top_comments {
+  flex-direction: column;
+  padding: 0;
+}
+
+.audio_detail .top_comments .each_comment {
+  background-color: rgba(0, 0, 0, 0.116);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.534);
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+}
+
+/*  #  #  #  #  #  #  #  #  #  #
+         F  O  O  T  E  R
+#  #  #  #  #  #  #  #  #  #  */
+.footer {
+  height: 120px;
+  background-color: rgba(45, 52, 54, 0.2);
+}
+
+.footer ul {
+  list-style: none;
+  margin-bottom: 1.25rem;
+}
+
+.footer li {
+  margin-left: 1.5rem;
+  font-size: x-large;
+}
+
+/*  #  #  #  #  #  #  #  #  #  #
+M  E  D  I  A    Q  U  E  R  R  Y
+#  #  #  #  #  #  #  #  #  #  */
+@media (max-width: 1268px) {
+  nav {
+    padding: 0 50px;
+  }
+
+  nav .loginout {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding: 100px 50px 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  section img {
+    margin: 50px 0 0;
+    max-width: 100%;
+  }
+
+  nav ul {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: calc(50vh - 80px);
+    padding: 50px 100px;
+    text-align: center;
+    overflow: auto;
+    transition: 0.5s;
+    background: rgba(45, 52, 54, 0.2);
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  nav.active ul {
+    top: 80px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  nav ul li a {
+    margin: 5px 0;
+    font-size: 24px;
+  }
+
+  .toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0 10px 0 #fff;
+    transition: 0.5s;
+  }
+
+  .toggle:after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  nav.active .toggle:before {
+    top: 14px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+  }
+
+  nav.active .toggle:after {
+    bottom: 14px;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 0 #fff;
+  }
+}
+
+/*
+@keyframes bgchange {
+  0% {
+    background-position: 0 50%;
+    color: #eeeeee;
+  }
+
+  50% {
+    background-position: 100% 50%;
+    color: #ffeaa7;
+  }
+
+  100% {
+    background-position: 0 50%;
+    color: #eeeeee;
+  }
+}
+*/
+
+/* ----- Profiles and Sign In ----- */
+.registerview {
+  width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgb(61, 39, 80);
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgba(99, 87, 109, 0.2);
+  color: white;
+  margin-top:100px;
+  text-align: left;
+}
+
+.registerview h1 {
+  padding-bottom: 40px;
+  font-size: 40px;
+}
+.registerview label{
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.buttons {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: #99201c;
+  background-image: linear-gradient(316deg, #c412c4 0%, #925884 74%);
+  background-size: 200% 200%;
+  color:black;
+}
+
+.buttons:hover {
+  background-color: #ba2d0b;
+  background-image: linear-gradient(319deg,
+      #ba2d0b 0%,
+      #fe7f2d 37%,
+      #ffbf46 100%);
+}
+/*Register*/
+.createform input[type=text],input[type=password],input[type=email]{
+  margin: 5px 0;
+  padding: 5px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.profileinfo{
+  width: 800px;
+  padding: 50x;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgb(61, 39, 80);
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgba(99, 87, 109, 0.2);
+  color: white;
+  margin-top:100px;
+  text-align: left;
+}
+.profileinfo h1{
+  padding: 40px 70px;
+}
+.profileinfo p {
+  padding: 20px 70px;
+}
+
+.updatebutton {
+  padding: 40px 20px;
+}
+
+.playlistprofile {
+  position: initial;
+  padding: 40px;
+}
+
+.playlistlist {
+  margin-top: 0px;
+  margin-left: 70px;
+}
+
