@@ -1,6 +1,6 @@
 # N01176789 - Cynthia Lipinski
 
-Features:
+Features Descriptions and Files:
 
 1) User profiles: Allows users to customize their usernames, description, and playlists that others will see. When registering it checks if the username already exists in the database so that there are no duplicates.     
   
